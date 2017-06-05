@@ -33,6 +33,7 @@ function fib(n1, n2, dir) {
 	newDiv.setAttribute('style', 'width: ' + (n2) + 'px; height: ' + (n2) + 'px; ' + direction(dir, n1, n2));
 	parent.insertBefore(newDiv, null);
 	parent.insertBefore(newCurve, null);
+
 	if (n2 < 500) {
 		setTimeout(function() {
 			fib(n2, n1 + n2, dir + 1);
