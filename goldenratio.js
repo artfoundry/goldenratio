@@ -1,4 +1,4 @@
-function fib(n1, n2, dir) {
+function fib(n1, n2, dir, limit) {
 	var newDiv = document.createElement('div'),
 		newCurve = document.createElement('div'),
 		direction = function(dir, n1, n2) {
@@ -34,13 +34,11 @@ function fib(n1, n2, dir) {
 	parent.insertBefore(newDiv, null);
 	parent.insertBefore(newCurve, null);
 
-	if (n2 < 500) {
+	if (n2 < limit) {
 		setTimeout(function() {
 			fib(n2, n1 + n2, dir + 1);
 		}, 100);
 	}
 }
 
-document.onload = fib(10, 10, 0);
-
-// for curves, add second div with border-radius set to 80px for one corner and 0 for all other corners
+document.onload = fib(10, 10, 0, 500);
