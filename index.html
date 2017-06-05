@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	div {
+		position: absolute;
+		outline: 1px solid black;
+	}
+	section {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+	.topright {
+		border-top: 1px solid red;
+		border-right: 1px solid red;
+		border-radius: 0 9000px 0 0;
+		outline: none;
+	}
+	.topleft {
+		border-top: 1px solid red;
+		border-left: 1px solid red;
+		border-radius: 9000px 0 0 0;
+		outline: none;
+	}
+	.bottomright {
+		border-bottom: 1px solid red;
+		border-right: 1px solid red;
+		border-radius: 0 0 9000px 0;
+		outline: none;
+	}
+	.bottomleft {
+		border-bottom: 1px solid red;
+		border-left: 1px solid red;
+		border-radius: 0 0 0 9000px;
+		outline: none;
+	}
+	</style>
+</head>
+<body>
+	<section id="cont">
+		<div id="10" class="topright" style="width: 10px; height: 10px;"></div>
+	</section>
+	<script src="goldenratio.js"></script>
+</body>
+</html>
