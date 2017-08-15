@@ -1,4 +1,4 @@
-function fib(n1, n2, dir, limit) {
+(function fib(n1, n2, dir, limit) {
 	var newDiv = document.createElement('div'),
 		newCurve = document.createElement('div'),
 		direction = function(dir, n1, n2) {
@@ -36,9 +36,10 @@ function fib(n1, n2, dir, limit) {
 
 	if (n2 < limit) {
 		setTimeout(function() {
-			fib(n2, n1 + n2, dir + 1);
+			fib(n2, n1 + n2, dir + 1, limit);
 		}, 100);
 	}
-}
-
-document.onload = fib(10, 10, 0, 500);
+})(10, 10, 0, 1000);
+// First two values indicate the size of the elements and are also ids for the elements.
+// Third is starting direction. Last is how many cycles to go.
+// Only last number can be changed without changing code
